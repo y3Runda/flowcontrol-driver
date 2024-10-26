@@ -31,4 +31,6 @@ private:
     TIM_HandleTypeDef* pwm_timer;
 };
 
+void edgeCounterTest(TIM_HandleTypeDef *htim_pwm, TIM_HandleTypeDef *htim_counter);
+
 #endif /* FLOWCONTROL_INC_FLOWCONTROL_TEST_H_ */

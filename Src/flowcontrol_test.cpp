@@ -50,3 +50,10 @@ void EdgeCounterTest::testSecond(TIM_HandleTypeDef* htim_counter, uint32_t frequ
 		printf("TEST FAILED\n\n");
 	}
 }
+
+void edgeCounterTest(TIM_HandleTypeDef *htim_pwm, TIM_HandleTypeDef *htim_counter) {
+	EdgeCounterTest test(htim_pwm);
+	test.testSecond(htim_counter, 500, 30, 1000);
+	test.testSecond(htim_counter, 1500, 50, 1000);
+	test.testSecond(htim_counter, 1500, 50, 2000);
+}
